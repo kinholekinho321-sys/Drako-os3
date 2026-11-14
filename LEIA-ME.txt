@@ -1,0 +1,8 @@
+DRAKO OS — PWA inicial
+
+Para instalar no Android:
+1. Publique todos os arquivos desta pasta em um serviço de hospedagem HTTPS (por exemplo, GitHub Pages).
+2. Abra o endereço publicado no Chrome do celular.
+3. Menu ⋮ > Instalar app (ou Adicionar à tela inicial).
+
+Os registros ficam salvos localmente no navegador/aparelho. Não há sincronização entre dispositivos nem conta de usuário nesta versão.
