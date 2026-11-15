@@ -1,61 +1,198 @@
-<!doctype html><html lang="pt-BR"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#090a0c"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icons/icon.svg"><title>DRako OS</title>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090a0c">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon.svg">
+<title>DRAKO OS</title>
 <style>
-:root{color-scheme:dark;--bg:#090a0c;--p:#121519;--l:#2b323a;--t:#edf0f2;--m:#929ba5;--g:#63b58c}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#26303a,transparent 55%),var(--bg);color:var(--t);font:15px/1.45 system-ui,sans-serif}.shell{max-width:760px;margin:auto;padding:16px 14px 100px}header{display:flex;gap:12px;align-items:center;padding:8px 2px 20px}.mark{border:1px solid #58616a;border-radius:13px;padding:10px}.brand{font-weight:850;letter-spacing:2px}.sub,.muted,.hint{color:var(--m);font-size:12px}.hero,.card,.stat{border:1px solid var(--l);border-radius:16px;background:var(--p);padding:15px}.hero{background:linear-gradient(135deg,#20262d,#111418);padding:21px}.hero h1{font-size:27px;margin:8px 0}.stats,.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}.stat strong{font-size:23px;display:block}.section{display:flex;justify-content:space-between;margin:20px 2px 9px;font-weight:700}.pill{font-size:10px;color:var(--m);border:1px solid var(--l);border-radius:30px;padding:5px 9px}.view{display:none}.view.active{display:block}nav{position:fixed;bottom:0;left:0;right:0;background:#0d1013ed;border-top:1px solid var(--l);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.navin{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr)}.navbtn{background:none;border:0;color:var(--m);font-size:10px;padding:7px 0}.navbtn.active{background:#20262d;color:white;border-radius:11px}.navbtn span{display:block;font-size:17px}input,select,textarea{width:100%;background:#0c0f12;color:var(--t);border:1px solid var(--l);border-radius:10px;padding:11px;margin:4px 0 9px}label{display:block;color:var(--m);font-size:12px;margin-top:7px}.btn{background:#dce2e7;color:#101316;border:0;border-radius:10px;padding:11px 13px;font-weight:700}.full{width:100%}.task,.entry{padding:11px 0;border-bottom:1px solid #252b31}.task:last-child,.entry:last-child{border:0}.task input{width:auto;accent-color:var(--g);margin-right:10px}.bar{height:8px;background:#293039;border-radius:9px;margin:8px 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}.entry b{font-size:13px}.entry small{display:block;color:var(--m);margin-top:3px}.day{display:grid;grid-template-columns:65px 1fr;gap:8px;align-items:center}.foot{text-align:center;color:#69737d;font-size:10px;margin:24px}
-
-.mealday{border:1px solid var(--l);border-radius:13px;padding:12px;margin:10px 0;background:#101418}.mealhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px}.mealitem{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #252b31;font-size:13px}.mealitem:last-child{border:0}.mealitem input,.shoppingitem input{width:auto;margin:3px 0 0;accent-color:var(--g);flex:0 0 auto}.mealitem small,.shoppingitem small{display:block;color:var(--m);font-size:11px;margin-top:2px}.mealstats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}.mealstat{border:1px solid var(--l);border-radius:12px;padding:11px;background:#101418}.mealstat strong{font-size:21px;display:block}.shoppingitem{display:flex;align-items:flex-start;gap:9px;padding:10px 0;border-bottom:1px solid #252b31}.shoppingitem:last-child{border:0}.mealnote{border-left:3px solid var(--g);padding:9px 11px;background:#171d21;border-radius:0 9px 9px 0;color:var(--m);font-size:12px}.navin{grid-template-columns:repeat(6,minmax(0,1fr))}.navbtn{font-size:9px}.navbtn span{font-size:16px}
-
-</style></head><body><div class="shell">
+:root{color-scheme:dark;--bg:#090a0c;--p:#121519;--l:#2b323a;--t:#edf0f2;--m:#929ba5;--g:#63b58c}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 50% -20%,#26303a,transparent 55%),var(--bg);color:var(--t);font:15px/1.45 system-ui,sans-serif}
+.shell{max-width:760px;margin:auto;padding:16px 14px 100px}
+header{display:flex;gap:12px;align-items:center;padding:8px 2px 20px}
+.mark{border:1px solid #58616a;border-radius:13px;padding:10px}
+.brand{font-weight:850;letter-spacing:2px}
+.sub,.muted,.hint{color:var(--m);font-size:12px}
+.hero,.card,.stat{border:1px solid var(--l);border-radius:16px;background:var(--p);padding:15px}
+.hero{background:linear-gradient(135deg,#20262d,#111418);padding:21px}
+.hero h1{font-size:27px;margin:8px 0}
+.stats,.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.stat strong{font-size:23px;display:block}
+.section{display:flex;justify-content:space-between;margin:20px 2px 9px;font-weight:700}
+.pill{font-size:10px;color:var(--m);border:1px solid var(--l);border-radius:30px;padding:5px 9px}
+.view{display:none}.view.active{display:block}
+nav{position:fixed;bottom:0;left:0;right:0;background:#0d1013ed;border-top:1px solid var(--l);padding:7px 4px calc(7px + env(safe-area-inset-bottom));z-index:5}
+.navin{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.navbtn{background:none;border:0;color:var(--m);font-size:9px;padding:7px 0}
+.navbtn.active{background:#20262d;color:white;border-radius:11px}
+.navbtn span{display:block;font-size:16px}
+input,select,textarea{width:100%;background:#0c0f12;color:var(--t);border:1px solid var(--l);border-radius:10px;padding:11px;margin:4px 0 9px}
+label{display:block;color:var(--m);font-size:12px;margin-top:7px}
+.btn{background:#dce2e7;color:#101316;border:0;border-radius:10px;padding:11px 13px;font-weight:700}
+.full{width:100%}
+.task,.entry{padding:11px 0;border-bottom:1px solid #252b31}
+.task:last-child,.entry:last-child{border:0}
+.task input{width:auto;accent-color:var(--g);margin-right:10px}
+.bar{height:8px;background:#293039;border-radius:9px;margin:8px 0;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--g)}
+.entry b{font-size:13px}.entry small{display:block;color:var(--m);margin-top:3px}
+.day{display:grid;grid-template-columns:65px 1fr;gap:8px;align-items:center}
+.foot{text-align:center;color:#69737d;font-size:10px;margin:24px}
+.mealday{border:1px solid var(--l);border-radius:13px;padding:12px;margin:10px 0;background:#101418}
+.mealhead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:7px}
+.mealitem{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #252b31;font-size:13px}
+.mealitem:last-child{border:0}
+.mealitem input,.shoppingitem input{width:auto;margin:3px 0 0;accent-color:var(--g);flex:0 0 auto}
+.mealitem small,.shoppingitem small{display:block;color:var(--m);font-size:11px;margin-top:2px}
+.mealstats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.mealstat{border:1px solid var(--l);border-radius:12px;padding:11px;background:#101418}
+.mealstat strong{font-size:21px;display:block}
+.shoppingitem{display:flex;align-items:flex-start;gap:9px;padding:10px 0;border-bottom:1px solid #252b31}
+.shoppingitem:last-child{border:0}
+.mealnote{border-left:3px solid var(--g);padding:9px 11px;background:#171d21;border-radius:0 9px 9px 0;color:var(--m);font-size:12px}
+.training-intro{margin-bottom:12px}
+.trainingday{border:1px solid var(--l);border-radius:14px;background:linear-gradient(145deg,#151a1f,#101418);padding:13px;margin:10px 0}
+.traininghead{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:9px}
+.trainingtitle{font-size:13px;font-weight:800;letter-spacing:.35px;color:var(--t)}
+.trainingtag{font-size:10px;color:var(--g);border:1px solid #315b49;border-radius:20px;padding:4px 8px;white-space:nowrap}
+.trainingitem{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-top:1px solid #252b31;color:#dce2e7;font-size:13px}
+.trainingitem input{width:17px;height:17px;flex:0 0 17px;margin:1px 0 0;accent-color:var(--g)}
+.trainingitem span{flex:1}
+.trainingitem small{display:block;color:var(--m);font-size:11px;margin-top:2px}
+.trainingitem.done span{text-decoration:line-through;color:#7e898f}
+.trainingprogress{height:6px;background:#293039;border-radius:8px;overflow:hidden;margin:8px 0 3px}
+.trainingprogress i{display:block;height:100%;background:var(--g);width:0}
+.training-foot{font-size:11px;color:var(--m);margin-top:9px}
+@media(min-width:560px){.training-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}.trainingday{margin:7px 0}}
+</style>
+</head>
+<body>
+<div class="shell">
 <header><div class="mark">◇</div><div><div class="brand">DRAKO OS</div><div class="sub">DISCIPLINA • FOCO • EVOLUÇÃO</div></div></header>
 <main>
-<section id="home" class="view active"><div class="hero"><div class="sub">CENTRO DE COMANDO · V2.0</div><h1>Construa consistência.</h1><div class="muted">Um plano realista. Execução registrada. Ajustes semanais.</div></div>
-<div class="stats"><div class="stat"><strong id="done">0/5</strong><span class="muted">MISSÕES DE HOJE</span></div><div class="stat"><strong id="pct">0%</strong><span class="muted">CONCLUSÃO DIÁRIA</span></div><div class="stat"><strong id="hours">0h</strong><span class="muted">ESTUDO NA SEMANA</span></div><div class="stat"><strong id="sessions">0</strong><span class="muted">SESSÕES ESA</span></div></div>
+<section id="home" class="view active">
+<div class="hero"><div class="sub">CENTRO DE COMANDO · V3.0</div><h1>Construa consistência.</h1><div class="muted">Um plano realista. Execução registrada. Ajustes semanais.</div></div>
+<div class="stats">
+<div class="stat"><strong id="done">0/5</strong><span class="muted">MISSÕES DE HOJE</span></div>
+<div class="stat"><strong id="pct">0%</strong><span class="muted">CONCLUSÃO DIÁRIA</span></div>
+<div class="stat"><strong id="hours">0h</strong><span class="muted">ESTUDO NA SEMANA</span></div>
+<div class="stat"><strong id="sessions">0</strong><span class="muted">SESSÕES ESA</span></div>
+</div>
 <div class="section">Missões de hoje <span class="pill" id="date"></span></div><div class="card"><div id="tasks"></div><div class="bar"><i id="progress" style="width:0%"></i></div></div>
-<div class="section">Resumo semanal</div><div class="card" id="summaryHome"></div></section>
-<section id="esa" class="view"><div class="section">Central de estudos ESA <span class="pill">DESEMPENHO</span></div><div class="stats"><div class="stat"><strong id="totalTime">0h</strong><span class="muted">TEMPO ESTUDADO</span></div><div class="stat"><strong id="totalQ">0</strong><span class="muted">QUESTÕES</span></div></div>
-<div class="card"><b>Registrar sessão</b><label>Matéria</label><select id="subj"><option>Matemática</option><option>Português</option><option>História</option><option>Geografia</option><option>Inglês</option><option>Literatura</option><option>Redação</option><option>Outra</option></select><label>Assunto</label><input id="topic" placeholder="Ex.: equação do 2º grau"><div class="grid2"><div><label>Tempo (min)</label><input id="mins" type="number" min="1" max="600" placeholder="45"></div><div><label>Questões feitas</label><input id="qs" type="number" min="0" placeholder="10"></div><div><label>Acertos</label><input id="correct" type="number" min="0" placeholder="7"></div><div><label>Data</label><input id="studyDate" type="date"></div></div><label>Erros para revisar</label><textarea id="errors" placeholder="O que precisa retomar?"></textarea><button class="btn full" onclick="addStudy()">Salvar sessão</button><p class="hint" id="studyMsg">Os dados ficam neste aparelho.</p></div>
+<div class="section">Resumo semanal</div><div class="card" id="summaryHome"></div>
+</section>
+
+<section id="esa" class="view">
+<div class="section">Central de estudos ESA <span class="pill">DESEMPENHO</span></div>
+<div class="stats"><div class="stat"><strong id="totalTime">0h</strong><span class="muted">TEMPO ESTUDADO</span></div><div class="stat"><strong id="totalQ">0</strong><span class="muted">QUESTÕES</span></div></div>
+<div class="card"><b>Registrar sessão</b>
+<label>Matéria</label><select id="subj"><option>Matemática</option><option>Português</option><option>História</option><option>Geografia</option><option>Inglês</option><option>Literatura</option><option>Redação</option><option>Outra</option></select>
+<label>Assunto</label><input id="topic" placeholder="Ex.: equação do 2º grau">
+<div class="grid2"><div><label>Tempo (min)</label><input id="mins" type="number" min="1" max="600" placeholder="45"></div><div><label>Questões feitas</label><input id="qs" type="number" min="0" placeholder="10"></div><div><label>Acertos</label><input id="correct" type="number" min="0" placeholder="7"></div><div><label>Data</label><input id="studyDate" type="date"></div></div>
+<label>Erros para revisar</label><textarea id="errors" placeholder="O que precisa retomar?"></textarea>
+<button class="btn full" onclick="addStudy()">Salvar sessão</button><p class="hint" id="studyMsg">Os dados ficam neste aparelho.</p></div>
 <div class="section">Desempenho por matéria</div><div class="card" id="subjectStats"></div><div class="section">Histórico</div><div class="card" id="history"></div>
 </section>
-<section id="plan" class="view"><div class="section">Planejamento semanal <span class="pill">EDITÁVEL</span></div><div class="card"><p class="muted">Planeje blocos possíveis e deixe espaço para imprevistos.</p><div id="days"></div><button class="btn full" onclick="savePlan()">Salvar planejamento</button><p id="planMsg" class="hint"></p></div><div class="section">Meta da semana</div><div class="card"><label>Meta concreta</label><input id="goal" placeholder="Ex.: 4 sessões de matemática"><button class="btn" onclick="localSet('goal',val('goal'));msg('goalMsg','Meta salva neste aparelho.')">Salvar meta</button><p id="goalMsg" class="hint"></p></div><div class="section">Estrutura de referência</div><div class="card muted">Manhã: trabalho (conforme seus horários).<br><br>Entre trabalho e escola: bloco de estudo ou treino, conforme tempo e energia.<br><br>Tarde/noite: escola.<br><br>Noite: revisão breve e descanso. Ajuste quando sua rotina mudar.</div></section>
-<section id="physical" class="view"><div class="section">Calistenia e recuperação</div><div class="card"><label>Data</label><input id="wdate" type="date"><label>Atividade</label><select id="wtype"><option>Treino de força geral</option><option>Parte superior</option><option>Parte inferior</option><option>Core e estabilidade</option><option>Mobilidade</option><option>Caminhada / corrida leve</option><option>Descanso</option></select><label>Duração (min)</label><input id="wmins" type="number" min="0" max="300" placeholder="30"><label>Recuperação</label><select id="recovery"><option>Boa</option><option>Regular</option><option>Preciso descansar</option></select><label>Observações</label><textarea id="wnotes" placeholder="Energia, dificuldade, desconforto..."></textarea><button class="btn full" onclick="addWorkout()">Salvar registro</button><p class="hint" id="wmsg">Registre também os dias de descanso.</p></div><div class="section">Histórico</div><div class="card" id="workouts"></div></section>
+
+<section id="plan" class="view">
+<div class="section">Planejamento semanal <span class="pill">EDITÁVEL</span></div>
+<div class="card"><p class="muted">Planeje blocos possíveis e deixe espaço para imprevistos.</p><div id="days"></div><button class="btn full" onclick="savePlan()">Salvar planejamento</button><p id="planMsg" class="hint"></p></div>
+<div class="section">Meta da semana</div><div class="card"><label>Meta concreta</label><input id="goal" placeholder="Ex.: 4 sessões de matemática"><button class="btn" onclick="localSet('goal',val('goal'));msg('goalMsg','Meta salva neste aparelho.')">Salvar meta</button><p id="goalMsg" class="hint"></p></div>
+<div class="section">Estrutura de referência</div><div class="card muted">Manhã: trabalho (conforme seus horários).<br><br>Entre trabalho e escola: bloco de estudo ou treino, conforme tempo e energia.<br><br>Tarde/noite: escola.<br><br>Noite: revisão breve e descanso. Ajuste quando sua rotina mudar.</div>
+</section>
+
+<section id="physical" class="view">
+<div class="section">Calistenia e recuperação <span class="pill">PROGRAMA SEMANAL</span></div>
+<div class="card training-intro">
+<b>Plano de peso corporal</b>
+<p class="muted">Marque cada exercício ao concluir. O progresso fica salvo neste aparelho e reinicia a cada semana.</p>
+<div class="grid2"><div class="stat"><strong id="trainingDone">0/7</strong><span class="muted">DIAS MARCADOS</span></div><div class="stat"><strong id="trainingPct">0%</strong><span class="muted">PROGRESSO SEMANAL</span></div></div>
+<div class="bar"><i id="trainingWeekProgress" style="width:0%"></i></div>
+<p class="training-foot">Comece com volume confortável e priorize a técnica. Se houver dor, interrompa o exercício. Quarta e domingo são dias de recuperação.</p>
+</div>
+<div class="training-grid" id="trainingPlan"></div>
+<div class="section">Registrar atividade <span class="pill">HISTÓRICO</span></div>
+<div class="card">
+<label>Data</label><input id="wdate" type="date">
+<label>Atividade</label><select id="wtype"><option>Treino de força geral</option><option>Parte superior</option><option>Parte inferior</option><option>Core e estabilidade</option><option>Mobilidade</option><option>Caminhada / corrida leve</option><option>Descanso</option></select>
+<label>Duração (min)</label><input id="wmins" type="number" min="0" max="300" placeholder="30">
+<label>Recuperação</label><select id="recovery"><option>Boa</option><option>Regular</option><option>Preciso descansar</option></select>
+<label>Observações</label><textarea id="wnotes" placeholder="Energia, dificuldade, desconforto..."></textarea>
+<button class="btn full" onclick="addWorkout()">Salvar registro</button><p class="hint" id="wmsg">Registre também os dias de descanso.</p>
+</div>
+<div class="section">Histórico de atividades</div><div class="card" id="workouts"></div>
+</section>
 
 <section id="meals" class="view">
 <div class="section">Planejamento alimentar <span class="pill">SEMANAL</span></div>
 <div class="card">
 <p class="muted">Cardápio flexível com cinco momentos de alimentação. Marque o que realizou; os registros ficam salvos neste aparelho e reiniciam a contagem a cada semana.</p>
 <div class="mealstats"><div class="mealstat"><strong id="mealDone">0/35</strong><span class="muted">REFEIÇÕES MARCADAS</span></div><div class="mealstat"><strong id="mealPct">0%</strong><span class="muted">DA SEMANA</span></div></div>
-<div class="bar"><i id="mealProgress" style="width:0%"></i></div>
-<div id="mealWeek"></div>
+<div class="bar"><i id="mealProgress" style="width:0%"></i></div><div id="mealWeek"></div>
 </div>
 <div class="section">Lista de compras individual <span class="pill">MENSAL</span></div>
-<div class="card">
-<p class="muted">Compra complementar à alimentação da família. As quantidades são referências de organização, não limites de consumo.</p>
-<div id="mealShopping"></div><p class="hint" id="shoppingProgress"></p>
-<button class="btn full" onclick="resetMealShopping()">Desmarcar lista de compras</button>
-</div>
-<div class="section">Orientações</div>
-<div class="card"><div class="mealnote">Almoço e jantar são as refeições da família: aproveite arroz, feijão, proteína e acompanhamentos disponíveis. Use os lanches conforme sua fome e rotina. Não pule refeições nem se force a comer para cumprir o checklist.</div><p class="muted">Este módulo organiza o cardápio e as compras; não é uma prescrição nutricional individual.</p></div>
+<div class="card"><p class="muted">Compra complementar à alimentação da família. As quantidades são referências de organização, não limites de consumo.</p><div id="mealShopping"></div><p class="hint" id="shoppingProgress"></p><button class="btn full" onclick="resetMealShopping()">Desmarcar lista de compras</button></div>
+<div class="section">Orientações</div><div class="card"><div class="mealnote">Almoço e jantar são as refeições da família: aproveite arroz, feijão, proteína e acompanhamentos disponíveis. Use os lanches conforme sua fome e rotina. Não pule refeições nem se force a comer para cumprir o checklist.</div><p class="muted">Este módulo organiza o cardápio e as compras; não é uma prescrição nutricional individual.</p></div>
 </section>
-<section id="review" class="view"><div class="section">Revisão semanal <span class="pill">DOMINGO</span></div><div class="card"><p class="muted">Avalie a semana com honestidade e ajuste o plano.</p><label>1. O que consegui cumprir?</label><textarea class="rev" placeholder="Resultados concretos..."></textarea><label>2. Progresso e dificuldades na ESA</label><textarea class="rev" placeholder="Matérias, questões, erros recorrentes..."></textarea><label>3. Treinos e recuperação</label><textarea class="rev" placeholder="Atividades, descanso, energia..."></textarea><label>4. Distrações e obstáculos</label><textarea class="rev" placeholder="O que atrapalhou?"></textarea><label>5. Prioridades realistas da próxima semana</label><textarea class="rev" placeholder="Até três prioridades..."></textarea><button class="btn full" onclick="saveReview()">Salvar revisão</button><p id="rmsg" class="hint"></p></div><div class="section">Dados da semana</div><div class="card" id="reviewSummary"></div></section>
-<div class="foot">DRAKO OS · VERSÃO 2.0 · DADOS LOCAIS</div></main></div>
-<nav><div class="navin"><button class="navbtn active" data-id="home" onclick="show('home')"><span>⌂</span>Painel</button><button class="navbtn" data-id="esa" onclick="show('esa')"><span>▤</span>ESA</button><button class="navbtn" data-id="plan" onclick="show('plan')"><span>◷</span>Plano</button><button class="navbtn" data-id="physical" onclick="show('physical')"><span>⌁</span>Físico</button><button class="navbtn" data-id="meals" onclick="show('meals')"><span>♨</span>Refeições</button><button class="navbtn" data-id="review" onclick="show('review')"><span>✓</span>Revisão</button></div></nav>
+
+<section id="review" class="view">
+<div class="section">Revisão semanal <span class="pill">DOMINGO</span></div>
+<div class="card"><p class="muted">Avalie a semana com honestidade e ajuste o plano.</p>
+<label>1. O que consegui cumprir?</label><textarea class="rev" placeholder="Resultados concretos..."></textarea>
+<label>2. Progresso e dificuldades na ESA</label><textarea class="rev" placeholder="Matérias, questões, erros recorrentes..."></textarea>
+<label>3. Treinos e recuperação</label><textarea class="rev" placeholder="Atividades, descanso, energia..."></textarea>
+<label>4. Distrações e obstáculos</label><textarea class="rev" placeholder="O que atrapalhou?"></textarea>
+<label>5. Prioridades realistas da próxima semana</label><textarea class="rev" placeholder="Até três prioridades..."></textarea>
+<button class="btn full" onclick="saveReview()">Salvar revisão</button><p id="rmsg" class="hint"></p></div>
+<div class="section">Dados da semana</div><div class="card" id="reviewSummary"></div>
+</section>
+<div class="foot">DRAKO OS · VERSÃO 3.0 · DADOS LOCAIS</div>
+</main></div>
+
+<nav><div class="navin">
+<button class="navbtn active" data-id="home" onclick="show('home')"><span>⌂</span>Painel</button>
+<button class="navbtn" data-id="esa" onclick="show('esa')"><span>▤</span>ESA</button>
+<button class="navbtn" data-id="plan" onclick="show('plan')"><span>◷</span>Plano</button>
+<button class="navbtn" data-id="physical" onclick="show('physical')"><span>⌁</span>Físico</button>
+<button class="navbtn" data-id="meals" onclick="show('meals')"><span>♨</span>Refeições</button>
+<button class="navbtn" data-id="review" onclick="show('review')"><span>✓</span>Revisão</button>
+</div></nav>
+
 <script>
 const $=id=>document.getElementById(id),get=(k,d)=>{try{return JSON.parse(localStorage.getItem('drako_'+k))??d}catch{return d}},localSet=(k,v)=>localStorage.setItem('drako_'+k,JSON.stringify(v)),val=id=>$(id).value;
 const iso=()=>{let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')},fmt=s=>s?new Date(s+'T12:00:00').toLocaleDateString('pt-BR'):'';
 const safe=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.navbtn').forEach(v=>v.classList.toggle('active',v.dataset.id===id));window.scrollTo(0,0);if(id==='esa')renderStudy();if(id==='physical')renderWorkouts();if(id==='meals')renderMeals();if(id==='review')renderReviewSummary()}
+function msg(id,text){$(id).textContent=text}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.navbtn').forEach(v=>v.classList.toggle('active',v.dataset.id===id));window.scrollTo(0,0);if(id==='esa')renderStudy();if(id==='physical'){renderTrainingPlan();renderWorkouts()}if(id==='meals')renderMeals();if(id==='review')renderReviewSummary()}
 const mission=[['study','Estudo para a ESA'],['exercise','Calistenia ou recuperação'],['reading','Leitura / estoicismo'],['revision','Revisar conteúdo'],['plan','Organizar amanhã']];
 function renderTasks(){let s=get('tasks_'+iso(),{});$('tasks').innerHTML=mission.map(([id,n])=>`<label class="task"><input type="checkbox" ${s[id]?'checked':''} onchange="toggleTask('${id}',this.checked)">${n}</label>`).join('');let n=mission.filter(x=>s[x[0]]).length;$('done').textContent=n+'/5';$('pct').textContent=Math.round(n/5*100)+'%';$('progress').style.width=n*20+'%'}
 function toggleTask(id,v){let s=get('tasks_'+iso(),{});s[id]=v;localSet('tasks_'+iso(),s);renderTasks()}
 function inWeek(d){let x=new Date(d+'T12:00:00'),now=new Date(),start=new Date(now.getFullYear(),now.getMonth(),now.getDate());start.setDate(start.getDate()-(start.getDay()+6)%7);let end=new Date(start);end.setDate(end.getDate()+7);return x>=start&&x<end}
 function renderStudy(){let a=get('studyLogs',[]),sum=a.reduce((n,x)=>n+x.mins,0),q=a.reduce((n,x)=>n+x.qs,0);$('totalTime').textContent=(sum/60).toFixed(1)+'h';$('totalQ').textContent=q;$('history').innerHTML=a.length?a.slice(0,20).map(x=>`<div class="entry"><b>${safe(x.subj)} · ${safe(x.topic)}</b><small>${fmt(x.date)} · ${x.mins} min · ${x.correct}/${x.qs} acertos</small>${x.errors?'<small>Revisar: '+safe(x.errors)+'</small>':''}</div>`).join(''):'<div class="muted">Nenhuma sessão registrada.</div>';let names=['Matemática','Português','História','Geografia','Inglês','Literatura','Redação','Outra'],stats=names.map(n=>[n,a.filter(x=>x.subj===n).reduce((v,x)=>v+x.mins,0)]),max=Math.max(1,...stats.map(x=>x[1]));$('subjectStats').innerHTML=stats.map(([n,m])=>`<div class="entry">${n}<div class="bar"><i style="width:${m/max*100}%"></i></div><small>${m} minutos registrados</small></div>`).join('')}
-function addStudy(){let mins=Number(val('mins')),qs=Number(val('qs')||0),correct=Number(val('correct')||0),topic=val('topic').trim();if(!topic||mins<1||mins>600||correct>qs||qs<0){$('studyMsg').textContent='Confira assunto, tempo e quantidade de acertos.';return}let a=get('studyLogs',[]);a.unshift({subj:val('subj'),topic,mins,qs,correct,date:val('studyDate')||iso(),errors:val('errors')});localSet('studyLogs',a.slice(0,300));['topic','mins','qs','correct','errors'].forEach(id=>$(id).value='');$('studyDate').value=iso();$('studyMsg').textContent='Sessão salva neste aparelho.';renderStudy();renderHome()}
+function addStudy(){let mins=Number(val('mins')),qs=Number(val('qs')||0),correct=Number(val('correct')||0),topic=val('topic').trim();if(!topic||mins<1||mins>600||correct>qs||qs<0){msg('studyMsg','Confira assunto, tempo e quantidade de acertos.');return}let a=get('studyLogs',[]);a.unshift({subj:val('subj'),topic,mins,qs,correct,date:val('studyDate')||iso(),errors:val('errors')});localSet('studyLogs',a.slice(0,300));['topic','mins','qs','correct','errors'].forEach(id=>$(id).value='');$('studyDate').value=iso();msg('studyMsg','Sessão salva neste aparelho.');renderStudy();renderHome()}
 function renderPlan(){let p=get('weekPlan',{}),names=['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'];$('days').innerHTML=names.map((n,i)=>`<div class="day"><b>${n}</b><input id="d${i}" value="${safe(p[i]||'')}" placeholder="Ex.: 40 min de matemática"></div>`).join('');$('goal').value=get('goal','')}
-function savePlan(){let p={};for(let i=0;i<7;i++)p[i]=val('d'+i);localSet('weekPlan',p);$('planMsg').textContent='Planejamento salvo neste aparelho.'}
-function addWorkout(){let mins=Number(val('wmins')||0);if(mins<0||mins>300){$('wmsg').textContent='Duração deve ficar entre 0 e 300 minutos.';return}let a=get('workoutLogs',[]);a.unshift({date:val('wdate')||iso(),type:val('wtype'),mins,recovery:val('recovery'),notes:val('wnotes')});localSet('workoutLogs',a.slice(0,200));$('wnotes').value='';$('wmins').value='';$('wmsg').textContent='Registro salvo.';renderWorkouts();renderHome()}
+function savePlan(){let p={};for(let i=0;i<7;i++)p[i]=val('d'+i);localSet('weekPlan',p);msg('planMsg','Planejamento salvo neste aparelho.')}
+function addWorkout(){let mins=Number(val('wmins')||0);if(mins<0||mins>300){msg('wmsg','Duração deve ficar entre 0 e 300 minutos.');return}let a=get('workoutLogs',[]);a.unshift({date:val('wdate')||iso(),type:val('wtype'),mins,recovery:val('recovery'),notes:val('wnotes')});localSet('workoutLogs',a.slice(0,200));$('wnotes').value='';$('wmins').value='';msg('wmsg','Registro salvo neste aparelho.');renderWorkouts();renderHome()}
 function renderWorkouts(){let a=get('workoutLogs',[]);$('workouts').innerHTML=a.length?a.slice(0,20).map(x=>`<div class="entry"><b>${safe(x.type)} · ${fmt(x.date)}</b><small>${x.mins} min · Recuperação: ${safe(x.recovery)}</small>${x.notes?'<small>'+safe(x.notes)+'</small>':''}</div>`).join(''):'<div class="muted">Nenhum registro ainda.</div>'}
 
+/* Programa semanal de calistenia. As marcações são armazenadas por semana. */
+const trainingDays=[
+{day:'SEGUNDA',title:'SUPERIORES A',tag:'FORÇA',items:[['Flexão tradicional','3 × 8–12'],['Flexão com joelhos apoiados','2 × 8–10'],['Flexão fechada','2 × 6–8'],['Superman','3 × 12'],['Prancha','3 × 20–30 s']]},
+{day:'TERÇA',title:'PERNAS',tag:'FORÇA',items:[['Agachamento livre','3 × 12–15'],['Afundo alternado','3 × 8 por perna'],['Elevação de panturrilha','3 × 15'],['Ponte de glúteos','3 × 12'],['Agachamento isométrico','2 × 20 s']]},
+{day:'QUARTA',title:'RECUPERAÇÃO ATIVA',tag:'LEVE',items:[['Mobilidade de quadril e ombros','Movimentos controlados'],['Alongamento leve','Sem forçar amplitude'],['Caminhada confortável','10–20 min']]},
+{day:'QUINTA',title:'SUPERIORES B',tag:'FORÇA',items:[['Flexão tradicional','3 × 8–12'],['Flexão com joelhos apoiados','2 × 10'],['Superman com braços abertos','3 × 10'],['Anjo reverso deitado','2 × 10'],['Prancha lateral','2 × 15–20 s por lado']]},
+{day:'SEXTA',title:'PERNAS E ABDÔMEN',tag:'FORÇA',items:[['Agachamento livre','3 × 12'],['Afundo reverso','3 × 8 por perna'],['Ponte de glúteos','3 × 12'],['Elevação de panturrilha','3 × 15'],['Dead bug','3 × 10 por lado']]},
+{day:'SÁBADO',title:'CONDICIONAMENTO',tag:'CIRCUITO',items:[['Polichinelos','20 s'],['Agachamentos','10 repetições'],['Flexões adaptadas','6 repetições'],['Prancha','20 s'],['Repetir o circuito','2 voltas; descansar 30 s entre exercícios']]},
+{day:'DOMINGO',title:'DESCANSO',tag:'RECUPERAÇÃO',items:[['Descanso','Recuperação e preparação para a próxima semana']]}
+];
+function trainingWeekKey(){let d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-(d.getDay()+6)%7);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function toggleTraining(day,index,checked){let a=get('trainingChecks',{}),key=trainingWeekKey()+'_'+day+'_'+index;a[key]=checked;localSet('trainingChecks',a);renderTrainingPlan()}
+function renderTrainingPlan(){let checks=get('trainingChecks',{}),week=trainingWeekKey(),doneDays=0,totalItems=0,doneItems=0;
+$('trainingPlan').innerHTML=trainingDays.map((d,i)=>{let marked=0;let items=d.items.map((it,j)=>{let key=week+'_'+i+'_'+j,checked=!!checks[key];totalItems++;if(checked){marked++;doneItems++}return `<label class="trainingitem ${checked?'done':''}"><input type="checkbox" ${checked?'checked':''} onchange="toggleTraining(${i},${j},this.checked)"><span>${safe(it[0])}<small>${safe(it[1])}</small></span></label>`}).join('');if(marked===d.items.length)doneDays++;return `<div class="trainingday"><div class="traininghead"><div class="trainingtitle">${d.day} — ${d.title}</div><span class="trainingtag">${d.tag}</span></div>${items}<div class="trainingprogress"><i style="width:${d.items.length?marked/d.items.length*100:0}%"></i></div><div class="training-foot">${marked}/${d.items.length} atividades marcadas</div></div>`}).join('');
+$('trainingDone').textContent=doneDays+'/7';$('trainingPct').textContent=Math.round(doneItems/totalItems*100)+'%';$('trainingWeekProgress').style.width=(doneItems/totalItems*100)+'%'}
 const mealPlan=[
 ['Segunda-feira',['Pão, 2 ovos e leite','Banana com aveia','Almoço da família: arroz, feijão, frango e acompanhamento','Vitamina de banana com leite e aveia','Jantar da família: arroz, feijão e carne ou ovos']],
 ['Terça-feira',['Pão, ovos e banana','Leite com aveia','Almoço da família: arroz, feijão, proteína e acompanhamento','Batata-doce cozida e leite','Jantar da família']],
@@ -71,16 +208,17 @@ function mealWeekKey(){let d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate
 function toggleMeal(day,index,checked){let a=get('mealChecks',{});a[mealWeekKey()+'_'+day+'_'+index]=checked;localSet('mealChecks',a);renderMeals()}
 function toggleMealShopping(index,checked){let a=get('mealShopping',{});a[index]=checked;localSet('mealShopping',a);renderMeals()}
 function resetMealShopping(){localSet('mealShopping',{});renderMeals()}
-function renderMeals(){
- let checks=get('mealChecks',{}),week=mealWeekKey(),today=(new Date().getDay()+6)%7,total=35,done=0;
- $('mealWeek').innerHTML=mealPlan.map((day,i)=>{let count=0;let rows=day[1].map((meal,j)=>{let key=week+'_'+i+'_'+j,checked=!!checks[key];if(checked){count++;done++}return `<label class="mealitem"><input type="checkbox" ${checked?'checked':''} onchange="toggleMeal(${i},${j},this.checked)"><span><b>${mealNames[j]}</b><small>${meal}</small></span></label>`}).join('');return `<div class="mealday ${i===today?'today':''}"><div class="mealhead"><b>${day[0]}</b><span class="pill">${count}/5${i===today?' · HOJE':''}</span></div>${rows}</div>`}).join('');
- $('mealDone').textContent=done+'/'+total;$('mealPct').textContent=Math.round(done/total*100)+'%';$('mealProgress').style.width=(done/total*100)+'%';
- let bought=get('mealShopping',{});$('mealShopping').innerHTML=mealShoppingItems.map((item,i)=>`<label class="shoppingitem"><input type="checkbox" ${bought[i]?'checked':''} onchange="toggleMealShopping(${i},this.checked)"><span><b>${item[0]}</b><small>${item[1]}</small></span></label>`).join('');$('shoppingProgress').textContent=mealShoppingItems.filter((item,i)=>bought[i]).length+' de '+mealShoppingItems.length+' itens separados.';
-}
-
-function saveReview(){localSet('review_'+iso(),Array.from(document.querySelectorAll('.rev')).map(x=>x.value));$('rmsg').textContent='Revisão salva neste aparelho.'}
+function renderMeals(){let checks=get('mealChecks',{}),week=mealWeekKey(),today=(new Date().getDay()+6)%7,total=35,done=0;
+$('mealWeek').innerHTML=mealPlan.map((day,i)=>{let count=0,rows=day[1].map((meal,j)=>{let key=week+'_'+i+'_'+j,checked=!!checks[key];if(checked){count++;done++}return `<label class="mealitem"><input type="checkbox" ${checked?'checked':''} onchange="toggleMeal(${i},${j},this.checked)"><span><b>${mealNames[j]}</b><small>${meal}</small></span></label>`}).join('');return `<div class="mealday"><div class="mealhead"><b>${day[0]}</b><span class="pill">${count}/5${i===today?' · HOJE':''}</span></div>${rows}</div>`}).join('');
+$('mealDone').textContent=done+'/'+total;$('mealPct').textContent=Math.round(done/total*100)+'%';$('mealProgress').style.width=(done/total*100)+'%';
+let bought=get('mealShopping',{});$('mealShopping').innerHTML=mealShoppingItems.map((item,i)=>`<label class="shoppingitem"><input type="checkbox" ${bought[i]?'checked':''} onchange="toggleMealShopping(${i},this.checked)"><span><b>${item[0]}</b><small>${item[1]}</small></span></label>`).join('');$('shoppingProgress').textContent=mealShoppingItems.filter((item,i)=>bought[i]).length+' de '+mealShoppingItems.length+' itens separados.'}
+function saveReview(){localSet('review_'+iso(),Array.from(document.querySelectorAll('.rev')).map(x=>x.value));msg('rmsg','Revisão salva neste aparelho.')}
 function renderReviewSummary(){let a=get('studyLogs',[]).filter(x=>inWeek(x.date)),w=get('workoutLogs',[]).filter(x=>inWeek(x.date));$('reviewSummary').innerHTML=`<div class="grid2"><div><b>${(a.reduce((n,x)=>n+x.mins,0)/60).toFixed(1)}h</b><div class="muted">estudo</div></div><div><b>${a.length}</b><div class="muted">sessões ESA</div></div><div><b>${a.reduce((n,x)=>n+x.qs,0)}</b><div class="muted">questões</div></div><div><b>${w.length}</b><div class="muted">registros físicos</div></div></div>`}
 function renderHome(){let a=get('studyLogs',[]).filter(x=>inWeek(x.date)),w=get('workoutLogs',[]).filter(x=>inWeek(x.date)),m=a.reduce((n,x)=>n+x.mins,0);$('hours').textContent=(m/60).toFixed(1)+'h';$('sessions').textContent=a.length;$('summaryHome').innerHTML=`${a.length} sessões ESA · ${a.reduce((n,x)=>n+x.qs,0)} questões · ${w.length} registros físicos`}
-$('date').textContent=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});$('studyDate').value=iso();$('wdate').value=iso();renderTasks();renderPlan();renderStudy();renderWorkouts();renderHome();renderMeals();
+$('date').textContent=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'short'});
+$('studyDate').value=iso();$('wdate').value=iso();
+renderTasks();renderPlan();renderStudy();renderTrainingPlan();renderWorkouts();renderHome();renderMeals();
 if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
-</script></body></html>
+</script>
+</body>
+</html>
