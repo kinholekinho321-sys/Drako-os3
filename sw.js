@@ -1,5 +1,5 @@
 
-const CACHE = 'drako-os-v4-1';
+const CACHE = 'drako-os-v4-2';
 
 const FILES = [
   './',
@@ -30,7 +30,6 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   const request = event.request;
-
   if (request.method !== 'GET') return;
 
   const url = new URL(request.url);
