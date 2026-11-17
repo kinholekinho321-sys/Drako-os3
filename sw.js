@@ -1,5 +1,5 @@
 
-const CACHE = 'drako-os-v4-2';
+const CACHE = 'drako-os-v4-3';
 
 const FILES = [
   './',
