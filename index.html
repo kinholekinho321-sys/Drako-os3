@@ -1,4 +1,4 @@
-<!doctype html>
+8<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
@@ -197,7 +197,7 @@ label{display:block;color:var(--m);font-size:12px;margin-top:7px}
 <label>Selecionar arquivo</label><input id="libFiles" type="file" multiple accept=".pdf,.txt,.md,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.jpg,.jpeg,.png,.webp">
 <label>Anotação inicial (opcional)</label><textarea id="libNote" rows="2" placeholder="O que é importante neste material?"></textarea>
 <button class="btn full" onclick="addLibraryFiles()">Adicionar à biblioteca</button><p class="hint" id="libMsg"></p>
-</div>
+</div><p class="hint" id="libMsg"></p>
 <div class="section">Explorar biblioteca <span class="pill" id="libCount">0 materiais</span></div>
 <div class="card">
 <div class="library-toolbar"><input class="wide" id="libSearch" placeholder="Buscar por nome, disciplina ou anotação..." oninput="renderLibrary()"><select id="libFilterSubject" onchange="renderLibrary()"><option value="">Todas as disciplinas</option><option>Matemática</option><option>Português</option><option>História</option><option>Geografia</option><option>Inglês</option><option>Literatura</option><option>Redação</option><option>Neurociência</option><option>Estoicismo</option><option>Outros</option></select><select id="libSort" onchange="renderLibrary()"><option value="recent">Mais recentes</option><option value="name">Nome A–Z</option><option value="subject">Disciplina</option></select></div>
